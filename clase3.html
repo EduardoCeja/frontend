@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Libre+Baskerville:wght@700&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root{
+        --white: #FFFFFF;
+        --black: #000000;
+        --dark: #232830;
+        --gris:#6d7379;
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #F7F7F7;
+        --sm:14px;
+        --md:16px;
+        --lg:18px;
+        --backgroundrgb:rgb(0,0,0);
+        --backgroundradial:radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 37%, rgba(0,52,255,1) 85%);
+        } 
+        body{
+            margin: 0;
+            font-family: 'Source Serif Pro', serif;
+        }
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background: var(--backgroundrgb);
+            background: var(--backgroundradial);
+        }
+        .form-container{
+           display: grid;
+           grid-template-rows: auto 1fr auto;
+           width: 300px;
+
+        }
+        .logo{
+            width: 150px;
+            margin-bottom: 10px;
+            justify-self: center;
+            display: none;
+        }
+
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
+        .form a{
+            color: var(--white);
+            font-size: var(--sm);
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 52px;
+        }
+        label{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+            color: var(--white);
+        }
+        .input{
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 30px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
+        }
+        .input-email{
+            margin-bottom: 22px;
+        }
+        .primary-button{
+            background-color: var(--gris);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        .secundary-button{
+            background-color: transparent;
+            border-radius: 8px;
+            border: 1px solid var(--white);
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        .secundary-button:hover{
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px var(--white);
+        }
+        
+        .login-button{
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        .login-button:link,
+        .login-button:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            display: inline-block;
+            border-radius: 100px;
+            transition: all .2s;
+            position: absolute;
+        }
+
+        .login-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px var(--gris);
+        }
+
+        .login-button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-button::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all .4s;
+        }
+
+        .login-button:hover::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+
+
+        @media (max-width:640px) {
+            .logo{
+                display: block;
+            }
+            .secundary-button {
+                width: 300px;
+                position: absolute;
+                bottom: 0;
+                margin-bottom: 24px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <img src="./logos/Logo (1).svg" alt="logo" class="logo">
+            <form action="/" class="form">
+                <label for="email" class="label">Email</label>
+                <input type="text" id="email" placeholder="emial@example.com" class="input input-email">
+
+                <label for="new-password" class="label">Password</label>
+                <input type="password" id="password" placeholder="*********" class="input input-password">
+            
+                <input type="submit" value="Iniciar sesion" class="primary-button login-button">
+
+                <a href="/">Olvidaste tu contraseña</a>
+            </form>
+            <button class="secundary-button signup-button">Inscribirse</button>
+        </div>
+    </div>
+</body>
+</html>
