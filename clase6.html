@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark: #232830;
+    --gris:#6d7379;
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --sm:14px;
+    --md:16px;
+    --lg:18px;
+    --backgroundrgb:rgb(0,0,0);
+    --backgroundradial:radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 37%, rgba(0,52,255,1) 85%);
+    } 
+    body{
+        margin: 0;
+        font-family: 'Source Serif Pro', serif;
+    }
+    .main-container{
+        background: var(--backgroundrgb);
+        background: var(--backgroundradial);
+    }
+    .cards-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,240px);
+        gap: 26px;
+        place-content: center;
+    }
+    .product-card{
+        width: 240px; 
+    }
+    .product-card img{
+        width: 240px; 
+        height: 240px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+    .product-img-shadow{
+        box-shadow: 8px 8px 7px var(--black);
+    }
+    .product-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 12px;
+    }
+    .product-info figure {
+        margin: 0;
+    }
+    .product-info figure img{
+        width: 45px; 
+        height: 36px;
+        border-radius: 0;
+    }
+    .product-info div p:nth-child(1){
+        font-weight: bold;
+        font-size: var(--md);
+        margin-top: 0;
+        margin-bottom: 4px;
+        color: var(--white);
+    }
+    .product-info div p:nth-child(2){
+        font-size: var(--sm);
+        margin-top: 0;
+        margin-bottom: 0;
+        color: var(--very-light-pink);
+    }
+
+    @media (max-width:640px) {
+        .cards-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill,140px);
+         }
+         .product-card{
+            width: 140px; 
+        }
+        .product-card img{
+            width: 140px; 
+            height: 140px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+    }
+</style>
+<body>
+    <section class="main-container">
+        <div class="cards-container">
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/810357/pexels-photo-810357.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/10945892/pexels-photo-10945892.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/7931427/pexels-photo-7931427.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/5063626/pexels-photo-5063626.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/10590576/pexels-photo-10590576.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/5387051/pexels-photo-5387051.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/7588421/pexels-photo-7588421.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/9762340/pexels-photo-9762340.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/9762338/pexels-photo-9762338.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/9544282/pexels-photo-9544282.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
+                " alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/8547649/pexels-photo-8547649.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/7422837/pexels-photo-7422837.png?auto=compress&cs=tinysrgb&dpr=1&w=5000" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/4400407/pexels-photo-4400407.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/5158124/pexels-photo-5158124.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/9212950/pexels-photo-9212950.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/303316/pexels-photo-303316.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/10106733/pexels-photo-10106733.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-img-shadow" src="https://images.pexels.com/photos/9331821/pexels-photo-9331821.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500 alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/carrito.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
