@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Libre+Baskerville:wght@700&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root{
+        --white: #FFFFFF;
+        --black: #000000;
+        --dark: #232830;
+        --gris:#6d7379;
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #F7F7F7;
+        --sm:14px;
+        --md:16px;
+        --lg:18px;
+        --backgroundrgb:rgb(0,0,0);
+        --backgroundradial:radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 37%, rgba(0,52,255,1) 85%);
+        } 
+        body{
+            margin: 0;
+            font-family: 'Source Serif Pro', serif;
+        }
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background: var(--backgroundrgb);
+            background: var(--backgroundradial);
+        }
+        .form-container{
+           display: grid;
+           grid-template-rows: auto 1fr auto;
+           width: 300px;
+
+        }
+        .logo{
+            width: 150px;
+            margin-bottom: 10px;
+            justify-self: center;
+            display: none;
+        }
+        .title{
+            font-size: var(--lg);
+            margin-bottom: 30px;
+            text-align: start;
+            color: var(--white);
+
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
+        .form div{
+            display: flex;
+            flex-direction: column;
+        }
+
+        label{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+            color: var(--white);
+        }
+        .value{
+            color:var(--very-light-pink);
+            font-size: var(--md);
+            margin: 8px 0 32px 0;
+        }
+
+        .secundary-button{
+            background-color: transparent;
+            border-radius: 8px;
+            border: 1px solid var(--white);
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        .secundary-button:hover{
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px var(--white);
+        }
+        
+        .login-button{
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        .login-button:link,
+        .login-button:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 15px 40px;
+            display: inline-block;
+            border-radius: 100px;
+            transition: all .2s;
+            position: absolute;
+        }
+
+        .login-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px var(--gris);
+        }
+
+        .login-button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-button::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all .4s;
+        }
+
+        .login-button:hover::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+
+
+        @media (max-width:640px) {
+            .form-container{
+                height: 100%;
+            }
+            .form{
+                height: 100%;
+                justify-content: space-between;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <h1 class="title">Mi Cuenta</h1>
+            <form action="/" class="form">
+                <div>
+                    <label for="name" class="label">Nombre</label>
+                    <p class="value">Eduardo Ceja</p>
+
+                    <label for="email" class="label">Email</label>
+                    <p class="value">eduardopsy1@gmail.com</p>
+
+                    <label for="password" class="label">Password</label>
+                    <p class="value">*******</p>
+
+               </div>
+                <input type="submit" value="Crear" class="secundary-button login-button">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
